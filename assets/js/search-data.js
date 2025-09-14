@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-a-post-with-plotly-js",
+            },{id: "post-the-catastrophe-of-lt-code-gt-pragma-unroll-lt-code-gt-in-cuda-programming",
+        
+          title: "The Catastrophe of &lt;code&gt;#pragma unroll&lt;/code&gt; in CUDA Programming",
+        
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/unroll/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
@@ -440,16 +451,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-excited-to-share-that-our-paper-mirage-a-multi-level-superoptimizer-for-tensor-programs-is-accepted-by-osdi-25-confetti-ball",
+          title: 'Excited to share that our paper Mirage: A Multi-Level Superoptimizer for Tensor Programs...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-our-first-version-of-mirage-persistent-kernel-is-released-sparkles-we-developed-a-compiler-that-automatically-transforms-llm-inference-into-a-single-megakernel-a-fused-gpu-kernel-that-performs-all-necessary-computation-and-communication-in-one-launch-this-end-to-end-gpu-fusion-approach-reduces-llm-inference-latency-by-1-2-6-7x-have-a-look-at-the-blog-and-the-codebase",
+          title: 'Our first version of Mirage Persistent Kernel is released:sparkles:! We developed a compiler...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
