@@ -33,7 +33,7 @@ Put your address / P.O. box / other info right below your picture. You can also 
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
-I'm currently a second-year master student at Carnegie Mellon University. I’m a member of the CMU [Catalyst research group](https://catalyst.cs.cmu.edu/), and am fortunate to work under the esteemed guidance of [Prof. Zhijao Jia](https://www.cs.cmu.edu/~zhihaoj2/).
+I'm currently a second-year master student at Carnegie Mellon University. I’m a member of the CMU [Catalyst research group](https://catalyst.cs.cmu.edu/), and am fortunate to work under the esteemed guidance of [Prof. Zhihao Jia](https://www.cs.cmu.edu/~zhihaoj2/).
 
 My research interests lie at the intersection of **machine learning systems** and **large language models**. I believe that research and engineering, systems and algorithms are equally indispensable in this exciting era of LLM. Currently, my primary work involves breaking the boundaries of traditional kernels by fusing them into a "megakernel" to push hardware utilization to the limit.
 
