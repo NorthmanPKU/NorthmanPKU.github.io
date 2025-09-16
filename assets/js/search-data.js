@@ -34,7 +34,7 @@ ninja.data = [{
         
           title: "The Catastrophe of &lt;code&gt;#pragma unroll&lt;/code&gt; in CUDA Programming",
         
-        description: "this is what included plotly.js code could look like",
+        description: "This post records a CUDA performance issue I previously overlooked, as a reminder to myself and to friends who might encounter similar situations in the future.",
         section: "Posts",
         handler: () => {
           
