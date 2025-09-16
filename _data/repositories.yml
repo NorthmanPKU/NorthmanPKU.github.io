@@ -1,6 +1,7 @@
 github_users:
-  - torvalds
-  - alshedivat
+  # - torvalds
+  # - alshedivat
+  # - NorthmanPKU
 
 repo_description_lines_max: 2
 
