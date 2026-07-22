@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'How the “Correct” Way to Align CUDA Pointers Can Slow Down Shared-Memory Loads'
+title: "How the “Correct” Way to Align CUDA Pointers Can Slow Down Shared-Memory Loads"
 date: 2026-07-05 19:26:00
 description: A pointer-to-integer round trip can erase CUDA shared-memory provenance, turn LDS/STS into generic LD.E/ST.E instructions, and slow down an otherwise correct kernel.
 tags: CUDA MLsys
@@ -164,6 +164,8 @@ produces a PTX declaration like this:
 
 The key PTX pattern for the bad implementation is:
 
+{% raw %}
+
 ```text
 mov.u32         %r63, smem;        // get the raw shared address of the PTX .shared symbol
 cvt.u64.u32     %rd7, %r63;
@@ -175,9 +177,13 @@ add.s64         %rd21, %rd1, %rd20;
 ld.v4.u32       {%r109, %r110, %r111, %r112}, [%rd21]; // generic PTX load
 ```
 
+{% endraw %}
+
 Notice that the final instruction is `ld.v4.u32`, with no `.shared` qualifier. The bad implementation is therefore already a generic load at the PTX level, and `ptxas` later lowers it to the SASS instruction `LD.E.128`.
 
 The key PTX pattern for the good implementation is:
+
+{% raw %}
 
 ```text
 mov.u32           %r121, smem;        // get the raw shared address of the PTX .shared symbol
@@ -187,6 +193,8 @@ add.s32           %r47, %r121, %r124; // compute padding on a shared 32-bit addr
 ...
 ld.shared.v4.u32  {%r128, %r129, %r130, %r131}, [%r127+37]; // shared PTX load
 ```
+
+{% endraw %}
 
 Here, the final instruction is `ld.shared.v4.u32`. The good implementation remains a shared-memory load at the PTX level, and `ptxas` later lowers it to the SASS instruction `LDS.128`. The runtime pointer values of the bad and good implementations can therefore be identical even though their intermediate code generation has already diverged.
 
