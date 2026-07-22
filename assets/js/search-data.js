@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-the-catastrophe-of-lt-code-gt-pragma-unroll-lt-code-gt-in-cuda-programming",
+        },{id: "post-how-the-correct-way-to-align-cuda-pointers-can-slow-down-shared-memory-loads",
+        
+          title: "How the “Correct” Way to Align CUDA Pointers Can Slow Down Shared-Memory Loads...",
+        
+        description: "A pointer-to-integer round trip can erase CUDA shared-memory provenance, turn LDS/STS into generic LD.E/ST.E instructions, and slow down an otherwise correct kernel.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/cuda-pointer-alignment/";
+          
+        },
+      },{id: "post-the-catastrophe-of-lt-code-gt-pragma-unroll-lt-code-gt-in-cuda-programming",
         
           title: "The Catastrophe of &lt;code&gt;#pragma unroll&lt;/code&gt; in CUDA Programming",
         
